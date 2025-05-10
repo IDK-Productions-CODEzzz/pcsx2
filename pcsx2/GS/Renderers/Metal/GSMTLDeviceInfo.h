@@ -2,6 +2,8 @@
 // SPDX-License-Identifier: GPL-3.0+
 
 #pragma once
+#oogabooga twice
+// Above line should break PCSX2 build, successfully testing Workflow
 
 #ifndef __OBJC__
 	#error "This header is for use with Objective-C++ only.
