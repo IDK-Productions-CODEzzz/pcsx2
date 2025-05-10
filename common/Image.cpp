@@ -394,7 +394,7 @@ namespace
 
 		static void ErrorExit(j_common_ptr cinfo)
 		{
-			JPEGErrorHandler* eh = (JPEGErrorHandler*)cinfo->err;
+			JPEGErrorHandler* eh = reinterpret_cast<JPEGErrorHandler*>(cinfo->err);
 			char msg[JMSG_LENGTH_MAX];
 			eh->err.format_message(cinfo, msg);
 			Console.ErrorFmt("libjpeg fatal error: {}", msg);
