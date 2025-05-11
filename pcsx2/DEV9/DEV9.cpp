@@ -130,7 +130,7 @@ s32 DEV9init()
 		}
 		else
 		{
-			dev9.eeprom = (u16*)MapViewOfFile(mapping, FILE_MAP_WRITE, 0, 0, 0);
+			dev9.eeprom = reinterpret_cast<u16*>(MapViewOfFile(mapping, FILE_MAP_WRITE, 0, 0, 0));
 
 			if (dev9.eeprom == NULL)
 			{
