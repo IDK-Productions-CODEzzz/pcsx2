@@ -115,7 +115,7 @@ def check_regression_test(baselinedir, testdir, name):
             print("--- Frame %u for %s is missing in test set" % (framenum, name))
             if first_fail:
                 write("<h1>{}</h1>".format(name))
-                
+
             if first_fail == False:
                 write("</table>")
                 write("<pre>--- Frame %u for %s is missing in test set</pre>" % (framenum, name))
